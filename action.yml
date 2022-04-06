@@ -1,0 +1,12 @@
+name: 'run php-ast'
+description: ''
+inputs:
+  target-branch:
+    description: '比較するブランチ名'
+    required: true
+    default: 'main'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.target-branch }}
